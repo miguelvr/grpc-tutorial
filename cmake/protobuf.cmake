@@ -20,7 +20,7 @@ function(PROTOBUF_GENERATE_CPP SRCS HDRS OUTPUT_FOLDER)
                     "${OUTPUT_FOLDER}/${PROTO_ID}.pb.h"
             COMMAND "${PROTOBUF_PROTOC_EXECUTABLE}"
             ARGS    "--proto_path=${PROTO_PATH}"
-                    "--cpp_out=${GENERATED_PROTOBUF_PATH}"
+                    "--cpp_out=${OUTPUT_FOLDER}"
                     ${ABSOLUTE_FILE_NAME}
             COMMENT "Running C++ protocol buffer compiler on ${PROTO}"
             VERBATIM)
